@@ -49,3 +49,13 @@ Update your PATH so that the protoc compiler can find the plugins:
 ```bash
  export PATH="$PATH:$(go env GOPATH)/bin"
 ```
+
+### Get Started
+Install packages required for the project:
+```bash
+ go get google.golang.org/grpc
+```
+To generate the Go code from the `.proto` files, run the following command in the root directory of the project:
+```bash
+ protoc --go_out=./proto --go-grpc_out=./proto ./proto/*.proto
+```
